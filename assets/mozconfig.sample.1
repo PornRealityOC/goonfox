@@ -31,11 +31,11 @@ mk_add_options MOZ_SERVICES_HEALTHREPORT=0
 mk_add_options MOZ_TELEMETRY_REPORTING=0
 
 
-# see issue # https://codeberg.org/librewolf/issues/issues/223
+# see issue # https://codeberg.org/goonfox/issues/issues/223
 export MOZ_REQUIRE_SIGNING=
 
 # branding..
-ac_add_options --with-branding=browser/branding/librewolf
+ac_add_options --with-branding=browser/branding/goonfox
 
 # This is needed for the sandboxed wasm libraries. If you already have them installed, you can remove this.
 ac_add_options --enable-bootstrap
@@ -43,5 +43,5 @@ ac_add_options --enable-bootstrap
 # this setting kills windows, but that's ok for now
 # the problem with windows is probably somewhere in the theme files
 # that nobody wants to touch..
-ac_add_options --with-app-name=librewolf
+ac_add_options --with-app-name=goonfox
 

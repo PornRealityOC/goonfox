@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 #
-# The script that patches the firefox source into the librewolf source.
+# The script that patches the firefox source into the goonfox source.
 #
 
 
@@ -60,7 +60,7 @@ def patch(patchfile):
 
 def enter_srcdir(_dir = None):
     if _dir == None:
-        dir = "librewolf-{}-{}".format(version, release)
+        dir = "goonfox-{}-{}".format(version, release)
     else:
         dir = _dir
     print("cd {}".format(dir))
@@ -86,7 +86,7 @@ def leave_srcdir():
 #
 
 
-def librewolf_patches():
+def goonfox_patches():
 
     enter_srcdir()
     
@@ -119,7 +119,7 @@ def librewolf_patches():
 
     exec('mkdir -p lw')
     enter_srcdir('lw')
-    exec('cp -v ../../settings/librewolf.cfg .')
+    exec('cp -v ../../settings/goonfox.cfg .')
     exec('cp -v ../../settings/distribution/policies.json .')
     exec('cp -v ../../settings/defaults/pref/local-settings.js .')
     leave_srcdir();
@@ -133,10 +133,10 @@ def librewolf_patches():
     # 1) patch it in
     patch('../patches/pref-pane/pref-pane-small.patch')
     # 2) new files
-    exec('cp ../patches/pref-pane/category-librewolf.svg browser/themes/shared/preferences/category-librewolf.svg')
-    exec('cp ../patches/pref-pane/librewolf.css browser/themes/shared/preferences/librewolf.css')
-    exec('cp ../patches/pref-pane/librewolf.inc.xhtml browser/components/preferences/librewolf.inc.xhtml')
-    exec('cp ../patches/pref-pane/librewolf.js browser/components/preferences/librewolf.js')
+    exec('cp ../patches/pref-pane/category-goonfox.svg browser/themes/shared/preferences/category-goonfox.svg')
+    exec('cp ../patches/pref-pane/goonfox.css browser/themes/shared/preferences/goonfox.css')
+    exec('cp ../patches/pref-pane/goonfox.inc.xhtml browser/components/preferences/goonfox.inc.xhtml')
+    exec('cp ../patches/pref-pane/goonfox.js browser/components/preferences/goonfox.js')
     
     # provide a script that fetches and bootstraps Nightly and some mozconfigs
     exec('cp -v ../scripts/mozfetch.sh lw/')
@@ -155,9 +155,9 @@ def librewolf_patches():
 
     print("-> Patching appstrings.properties")
     # Why is "Firefox" hardcoded there???
-    exec("find . -path '*/appstrings.properties' -exec sed -i s/Firefox/LibreWolf/ {} \\;")
+    exec("find . -path '*/appstrings.properties' -exec sed -i s/Firefox/Goonfox/ {} \\;")
 
-    print("-> Applying LibreWolf locales")
+    print("-> Applying Goonfox locales")
     l10n_dir = Path("..", "l10n")
     for source_path in l10n_dir.rglob("*"):
         if source_path.is_dir() or source_path.name.endswith(".md"):
@@ -194,19 +194,19 @@ def librewolf_patches():
 
 
 #
-# Main functionality in this script.. which is to call librewolf_patches()
+# Main functionality in this script.. which is to call goonfox_patches()
 #
 
 if len(args) != 2:
-    sys.stderr.write('error: please specify version and release of librewolf source')
+    sys.stderr.write('error: please specify version and release of goonfox source')
     sys.exit(1)
 version = args[0]
 release = args[1]
-srcdir = "librewolf-{}-{}".format(version, release)
+srcdir = "goonfox-{}-{}".format(version, release)
 if not os.path.exists(srcdir + '/configure.py'):
     sys.stderr.write('error: folder doesn\'t look like a Firefox folder.')
     sys.exit(1)
 
-librewolf_patches()
+goonfox_patches()
 
 sys.exit(0) # ensure 0 exit code

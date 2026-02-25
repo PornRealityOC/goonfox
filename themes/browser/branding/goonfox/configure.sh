@@ -5,7 +5,7 @@
 # there is a possible patch to consider when changing this:
 # see: patches/browser-confvars.patch
 
-MOZ_APP_NAME=librewolf
-MOZ_APP_BASENAME=LibreWolf
-MOZ_APP_DISPLAYNAME=LibreWolf
-MOZ_APP_REMOTINGNAME=librewolf
+MOZ_APP_NAME=goonfox
+MOZ_APP_BASENAME=Goonfox
+MOZ_APP_DISPLAYNAME=Goonfox
+MOZ_APP_REMOTINGNAME=goonfox

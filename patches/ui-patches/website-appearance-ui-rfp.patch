@@ -28,11 +28,11 @@ index 46283d3..b0668dc 100644
 +        infoBox.style.marginTop = "10px";
 +        infoBox.style.marginBottom = "5px";
 +        const text = document.createElement("div");
-+        text.innerText = "This feature is disabled because ResistFingerprinting is enabled. This means LibreWolf will force web content to display in a light theme.";
++        text.innerText = "This feature is disabled because ResistFingerprinting is enabled. This means Goonfox will force web content to display in a light theme.";
 +        infoBox.appendChild(text);
 +        const a = document.createElement("a");
 +        a.className = "text-link";
-+        a.href = "https://librewolf.net/docs/faq/#why-is-librewolf-forcing-light-theme";
++        a.href = "https://goonfox.net/docs/faq/#why-is-goonfox-forcing-light-theme";
 +        a.innerText = " Learn more";
 +        infoBox.appendChild(a);
 +        const insertBeforeNode = container.children[1] ? container.children[1].nextSibling : null;

@@ -37,7 +37,7 @@ jobs:
     if: ${{ !(forgejo.event_name == 'pull_request' && forgejo.head_ref == 'beta' && forgejo.base_ref == 'main') }}
     runs-on: epsilon
     container:
-      image: codeberg.org/librewolf/bsys6:dind
+      image: codeberg.org/goonfox/bsys6:dind
     outputs:
       ff_version: ${{ steps.detect.outputs.FF_VERSION }}
       ff_channel: ${{ steps.detect.outputs.FF_CHANNEL }}
@@ -81,7 +81,7 @@ jobs:
     if: inputs.Target == 'all' || inputs.Target == 'linux' || inputs.Target == ''
     runs-on: epsilon
     container:
-      image: codeberg.org/librewolf/bsys6:dind
+      image: codeberg.org/goonfox/bsys6:dind
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
@@ -118,7 +118,7 @@ jobs:
         with:
           name: linux-test
           path: |
-            librewolf-*.tar.xz
+            goonfox-*.tar.xz
             mozconfig.txt
           retention-days: ${{ github.event_name == 'push' && 3 || 14 }}
 
@@ -127,7 +127,7 @@ jobs:
     if: inputs.Target == 'all' || inputs.Target == 'windows'
     runs-on: epsilon
     container:
-      image: codeberg.org/librewolf/bsys6:dind
+      image: codeberg.org/goonfox/bsys6:dind
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
@@ -164,7 +164,7 @@ jobs:
         with:
           name: windows-test
           path: |
-            librewolf-*.zip
+            goonfox-*.zip
             mozconfig.txt
           retention-days: ${{ github.event_name == 'push' && 3 || 14 }}
 
@@ -173,7 +173,7 @@ jobs:
     if: inputs.Target == 'all' || inputs.Target == 'macos'
     runs-on: epsilon
     container:
-      image: codeberg.org/librewolf/bsys6:dind
+      image: codeberg.org/goonfox/bsys6:dind
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
@@ -210,6 +210,6 @@ jobs:
         with:
           name: macos-test
           path: |
-            librewolf-*.tar.gz
+            goonfox-*.tar.gz
             mozconfig.txt
           retention-days: ${{ github.event_name == 'push' && 3 || 14 }}

@@ -27,7 +27,7 @@ if (!ci_build_number) {
     process.exit(1);
 }
 
-const tarball_artifact = `librewolf-${version}.source.tar.gz`;
+const tarball_artifact = `goonfox-${version}.source.tar.gz`;
 const sha256sum_artifact = `${tarball_artifact}.sha256sum`;
 const sha512sum_artifact = `${tarball_artifact}.sha512sum`;
 const tarballExists = fs.existsSync(path.join('..', tarball_artifact));
@@ -78,9 +78,9 @@ async function createNewRelease() {
     const requestBody = {
         body: `Please see the README.md file for compilation instructions and dependency details.
 
-* [${tarball_artifact}](https://storage.ci.librewolf.net/artifacts/${ci_build_number}/librewolf-${version}.source.tar.gz)
-* [${sha256sum_artifact}](https://storage.ci.librewolf.net/artifacts/${ci_build_number}/librewolf-${version}.source.tar.gz.sha256sum)
-* [${sha512sum_artifact}](https://storage.ci.librewolf.net/artifacts/${ci_build_number}/librewolf-${version}.source.tar.gz.sha512sum)
+* [${tarball_artifact}](https://storage.ci.goonfox.net/artifacts/${ci_build_number}/goonfox-${version}.source.tar.gz)
+* [${sha256sum_artifact}](https://storage.ci.goonfox.net/artifacts/${ci_build_number}/goonfox-${version}.source.tar.gz.sha256sum)
+* [${sha512sum_artifact}](https://storage.ci.goonfox.net/artifacts/${ci_build_number}/goonfox-${version}.source.tar.gz.sha512sum)
 
 Note: these artifacts don't have a long shelflife on our current s3 server, but it demonstrates the use of exernal storage to store big artifacts.
 `,

@@ -1,1 +1,1 @@
-identity-allow-site-data = LibreWolf: Immer Cookies/Daten für diese Seite speichern
+identity-allow-site-data = Goonfox: Immer Cookies/Daten für diese Seite speichern

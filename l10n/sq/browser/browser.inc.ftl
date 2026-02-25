@@ -1,1 +1,1 @@
-identity-allow-site-data = LibreWolf: Depozito përherë “cookies”/të dhëna për këtë sajt
+identity-allow-site-data = Goonfox: Depozito përherë “cookies”/të dhëna për këtë sajt

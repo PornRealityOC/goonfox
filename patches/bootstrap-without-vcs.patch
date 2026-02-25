@@ -1,4 +1,4 @@
-# LibreWolf bootstrap-without-vcs.patch
+# Goonfox bootstrap-without-vcs.patch
 #
 # Author:        Malte Jürgens <maltejur@dismail.de>
 # Description:   Allow mach bootstrapping without a VCS checkout

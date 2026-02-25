@@ -7,7 +7,7 @@ index 5e8e0dc..a0d4ea5 100644
    "chrome://extensions/content/schemas/native_manifest.json";
  
 -const REGPATH = "Software\\Mozilla";
-+const REGPATH = "Software\\LibreWolf";
++const REGPATH = "Software\\Goonfox";
  
  var NativeManifests = {
    _initializePromise: null,

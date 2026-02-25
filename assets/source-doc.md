@@ -6,14 +6,14 @@ Our upstream dependencies:
 * Mozilla Firefox
 * uBlock Origin
 
-LibreWolf consists of two parts:
+Goonfox consists of two parts:
 
 * Settings
 * Browser Source
 
-These two combined produce the `librewolf-<version>.source.tar.gz` release tarbal (using gitlab.com CI.)
+These two combined produce the `goonfox-<version>.source.tar.gz` release tarbal (using gitlab.com CI.)
 
-This tarball contains a `Makefile` that allows you to build and patch the LibreWolf sources.
+This tarball contains a `Makefile` that allows you to build and patch the Goonfox sources.
 
 The repositories are maintained by the:
 

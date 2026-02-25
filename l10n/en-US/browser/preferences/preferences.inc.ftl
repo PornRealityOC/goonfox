@@ -1,71 +1,71 @@
-## LibreWolf preferences
+## Goonfox preferences
 
 # Sidebar
-pane-librewolf-title = LibreWolf
-category-librewolf =
+pane-goonfox-title = Goonfox
+category-goonfox =
     .tooltiptext = about:config changes, logically grouped and easily accessible
 # Main content
-librewolf-header = LibreWolf Preferences
-librewolf-warning-title = Heads up!
-librewolf-warning-description = We carefully choose default settings to focus on privacy and security. When changing these settings, read the descriptions to understand the implications of those changes.
+goonfox-header = Goonfox Preferences
+goonfox-warning-title = Heads up!
+goonfox-warning-description = We carefully choose default settings to focus on privacy and security. When changing these settings, read the descriptions to understand the implications of those changes.
 # Page Layout
-librewolf-general-heading = Browser Behavior
-librewolf-extension-update-checkbox =
+goonfox-general-heading = Browser Behavior
+goonfox-extension-update-checkbox =
     .label = Update add-ons automatically
-librewolf-sync-checkbox =
+goonfox-sync-checkbox =
     .label = Enable Firefox Sync
-librewolf-autocopy-checkbox =
+goonfox-autocopy-checkbox =
     .label = Enable middle click paste
-librewolf-styling-checkbox =
+goonfox-styling-checkbox =
     .label = Allow userChrome.css customization
-librewolf-network-heading = Networking
-librewolf-ipv6-checkbox =
+goonfox-network-heading = Networking
+goonfox-ipv6-checkbox =
     .label = Enable IPv6
-librewolf-privacy-heading = Privacy
-librewolf-xorigin-ref-checkbox =
+goonfox-privacy-heading = Privacy
+goonfox-xorigin-ref-checkbox =
     .label = Limit cross-origin referrers
-librewolf-broken-heading = Fingerprinting
-librewolf-webgl-checkbox =
+goonfox-broken-heading = Fingerprinting
+goonfox-webgl-checkbox =
     .label = Enable WebGL
-librewolf-rfp-checkbox =
+goonfox-rfp-checkbox =
     .label = Enable ResistFingerprinting
-librewolf-letterboxing-checkbox =
+goonfox-letterboxing-checkbox =
     .label = Enable letterboxing
-librewolf-security-heading = Security
-librewolf-ocsp-checkbox =
+goonfox-security-heading = Security
+goonfox-ocsp-checkbox =
     .label = Enforce OCSP hard-fail
-librewolf-goog-safe-checkbox =
+goonfox-goog-safe-checkbox =
     .label = Enable Google Safe Browsing
-librewolf-goog-safe-download-checkbox =
+goonfox-goog-safe-download-checkbox =
     .label = Scan downloads
 # In-depth descriptions
-librewolf-extension-update-description = Keep extensions up to date without manual intervention. A good choice for your security.
-librewolf-extension-update-warning1 = If you don't review the code of your extensions before every update, you should enable this option.
-librewolf-ipv6-description = Allow { -brand-short-name } to connect using IPv6.
-librewolf-ipv6-warning1 = Instead of blocking IPv6 in the browser, we suggest enabling the IPv6 privacy extension in your OS.
-librewolf-ocsp-description = Prevent connecting to a website if the OCSP check cannot be performed.
-librewolf-ocsp-warning1 = This increases security, but it will cause breakage when an OCSP server is down.
-librewolf-sync-description = Sync your data with other browsers. Requires restart.
-librewolf-sync-warning1 = Firefox Sync encrypts data locally before transmitting it to the server.
-librewolf-autocopy-description = Select some text to copy it, then paste it with a middle-mouse click.
-librewolf-styling-description = Enable this if you want to customize the UI with a manually loaded theme.
-librewolf-styling-warning1 = Make sure you trust the provider of the theme.
-librewolf-xorigin-ref-description = Send a referrer only on same-origin.
-librewolf-xorigin-ref-warning1 = This may cause breakage. Additionally, even when sent referrers will still be trimmed.
-librewolf-webgl-description = WebGL is a strong fingerprinting vector.
-librewolf-webgl-warning1 = If you need to enable it, consider using an extension like Canvas Blocker.
-librewolf-rfp-description = ResistFingerprinting is the best in class anti-fingerprinting tool.
-librewolf-rfp-warning1 = If you need to disable it, consider using an extension like Canvas Blocker.
-librewolf-letterboxing-description = Letterboxing applies margins around your windows, in order to return a limited set of rounded resolutions.
-librewolf-goog-safe-description = If you are worried about malware and phishing, consider enabling it.
-librewolf-goog-safe-warning1 = Disabled over censorship concerns but recommended for less advanced users. All the checks happen locally.
-librewolf-goog-safe-download-description = Allow Safe Browsing to scan your downloads to identify suspicious files.
-librewolf-goog-safe-download-warning1 = All the checks happen locally.
+goonfox-extension-update-description = Keep extensions up to date without manual intervention. A good choice for your security.
+goonfox-extension-update-warning1 = If you don't review the code of your extensions before every update, you should enable this option.
+goonfox-ipv6-description = Allow { -brand-short-name } to connect using IPv6.
+goonfox-ipv6-warning1 = Instead of blocking IPv6 in the browser, we suggest enabling the IPv6 privacy extension in your OS.
+goonfox-ocsp-description = Prevent connecting to a website if the OCSP check cannot be performed.
+goonfox-ocsp-warning1 = This increases security, but it will cause breakage when an OCSP server is down.
+goonfox-sync-description = Sync your data with other browsers. Requires restart.
+goonfox-sync-warning1 = Firefox Sync encrypts data locally before transmitting it to the server.
+goonfox-autocopy-description = Select some text to copy it, then paste it with a middle-mouse click.
+goonfox-styling-description = Enable this if you want to customize the UI with a manually loaded theme.
+goonfox-styling-warning1 = Make sure you trust the provider of the theme.
+goonfox-xorigin-ref-description = Send a referrer only on same-origin.
+goonfox-xorigin-ref-warning1 = This may cause breakage. Additionally, even when sent referrers will still be trimmed.
+goonfox-webgl-description = WebGL is a strong fingerprinting vector.
+goonfox-webgl-warning1 = If you need to enable it, consider using an extension like Canvas Blocker.
+goonfox-rfp-description = ResistFingerprinting is the best in class anti-fingerprinting tool.
+goonfox-rfp-warning1 = If you need to disable it, consider using an extension like Canvas Blocker.
+goonfox-letterboxing-description = Letterboxing applies margins around your windows, in order to return a limited set of rounded resolutions.
+goonfox-goog-safe-description = If you are worried about malware and phishing, consider enabling it.
+goonfox-goog-safe-warning1 = Disabled over censorship concerns but recommended for less advanced users. All the checks happen locally.
+goonfox-goog-safe-download-description = Allow Safe Browsing to scan your downloads to identify suspicious files.
+goonfox-goog-safe-download-warning1 = All the checks happen locally.
 # Footer
-librewolf-footer = Useful links
-librewolf-config-link = All advanced settings (about:config)
-librewolf-open-profile = Open user profile directory
+goonfox-footer = Useful links
+goonfox-config-link = All advanced settings (about:config)
+goonfox-open-profile = Open user profile directory
 
 ## Privacy & Security preferences
 
-content-blocking-section-top-level-description = LibreWolf supports - and it enables by default - Enhanced Tracking Protection in Strict mode. This is one of the most important settings in the browser, as it provides state partitioning, strict blocking lists and other neat privacy features. We do not recommend changing to other modes.
+content-blocking-section-top-level-description = Goonfox supports - and it enables by default - Enhanced Tracking Protection in Strict mode. This is one of the most important settings in the browser, as it provides state partitioning, strict blocking lists and other neat privacy features. We do not recommend changing to other modes.

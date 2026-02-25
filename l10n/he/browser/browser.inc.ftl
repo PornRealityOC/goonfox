@@ -1,1 +1,1 @@
-identity-allow-site-data = LibreWolf: תמיד לשמור עוגיות/נתונים עבור האתר הזה
+identity-allow-site-data = Goonfox: תמיד לשמור עוגיות/נתונים עבור האתר הזה

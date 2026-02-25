@@ -1,1 +1,1 @@
-identity-allow-site-data = LibreWolf: Alati salvesta selle saidi küpsised/andmed
+identity-allow-site-data = Goonfox: Alati salvesta selle saidi küpsised/andmed

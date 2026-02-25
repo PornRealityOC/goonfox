@@ -1,20 +1,20 @@
-.librewolf-collapse > input {
+.goonfox-collapse > input {
 	display: none;
 }
-.librewolf-collapse > input ~ .librewolf-collapsed {
+.goonfox-collapse > input ~ .goonfox-collapsed {
 	display: none;
 	/* max-height: 0; */
 	transition: max-height 0.25s ease-in-out;
 }
-.librewolf-collapse > input:checked ~ .librewolf-collapsed {
+.goonfox-collapse > input:checked ~ .goonfox-collapsed {
 	display: block;
 	/* max-height: 20rem; */
 }
-.librewolf-warning {
+.goonfox-warning {
 	display: inline;
 	font-size: 0.8em;
 }
-.librewolf-button-icon {
+.goonfox-button-icon {
 	width: 16px;
 	height: 16px;
 	margin-right: 8px;

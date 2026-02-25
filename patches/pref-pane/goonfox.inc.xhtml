@@ -1,0 +1,228 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+<script src="chrome://browser/content/preferences/goonfox.js"/>
+
+<html:template id="template-paneLibrewolf">
+
+<hbox class="subcategory" hidden="true" data-category="paneLibrewolf">
+  <html:h1 data-l10n-id="goonfox-header"/>
+</hbox>
+
+<groupbox hidden="true" data-category="paneLibrewolf">
+  <html:h2 data-l10n-id="goonfox-general-heading"/>
+
+  <!-- TEMPLATE FOR A NEW PREFERENCE
+  <hbox>
+    <checkbox id="goonfox-LABEL-checkbox" data-l10n-id="goonfox-LABEL-checkbox" preference="PREF" flex="1" />
+    <html:label for="goonfox-LABEL-collapse" class="sidebar-footer-link" pack="end"> <image class="sidebar-footer-icon help-icon"/> </html:label>
+  </hbox>
+  <vbox class="goonfox-collapse indent">
+    <html:input type="checkbox" id="goonfox-LABEL-collapse" />
+    <vbox class="goonfox-collapsed tracking-protection-ui content-blocking-category">
+      <label data-l10n-id="goonfox-LABEL-description" />
+      <html:div> <image src="chrome://browser/skin/warning.svg" /> <label data-l10n-id="goonfox-LABEL-warning1" class="goonfox-warning" /> </html:div>
+      <checkbox preference="PREF" label="PREF" />
+    </vbox>
+  </vbox>
+  -->
+
+  <hbox>
+    <checkbox id="goonfox-extension-update-checkbox" data-l10n-id="goonfox-extension-update-checkbox" preference="extensions.update.autoUpdateDefault" flex="1" />
+    <html:label for="goonfox-extension-update-collapse" class="sidebar-footer-link" pack="end"> <image class="sidebar-footer-icon help-icon"/> </html:label>
+  </hbox>
+  <vbox class="goonfox-collapse indent">
+    <html:input type="checkbox" id="goonfox-extension-update-collapse" />
+    <vbox class="goonfox-collapsed tracking-protection-ui content-blocking-category">
+      <label data-l10n-id="goonfox-extension-update-description" />
+      <html:div> <image src="chrome://browser/skin/warning.svg" /> <label data-l10n-id="goonfox-extension-update-warning1" class="goonfox-warning" /> </html:div>
+      <checkbox preference="extensions.update.autoUpdateDefault" label="extensions.update.autoUpdateDefault" />
+      <checkbox preference="extensions.update.enabled" label="extensions.update.enabled" />
+    </vbox>
+  </vbox>
+
+  <hbox>
+    <checkbox id="goonfox-sync-checkbox" data-l10n-id="goonfox-sync-checkbox" preference="identity.fxaccounts.enabled" flex="1" />
+    <html:label for="goonfox-sync-collapse" class="sidebar-footer-link" pack="end"> <image class="sidebar-footer-icon help-icon"/> </html:label>
+  </hbox>
+  <vbox class="goonfox-collapse indent">
+    <html:input type="checkbox" id="goonfox-sync-collapse" />
+    <vbox class="goonfox-collapsed tracking-protection-ui content-blocking-category">
+      <label data-l10n-id="goonfox-sync-description" />
+      <html:div> <image src="chrome://browser/skin/warning.svg" /> <label data-l10n-id="goonfox-sync-warning1" class="goonfox-warning" /> </html:div>
+      <checkbox preference="identity.fxaccounts.enabled" label="identity.fxaccounts.enabled" />
+    </vbox>
+  </vbox>
+  
+  <hbox>
+    <checkbox id="goonfox-autocopy-checkbox" data-l10n-id="goonfox-autocopy-checkbox" preference="clipboard.autocopy" flex="1" />
+    <html:label for="goonfox-autocopy-collapse" class="sidebar-footer-link" pack="end"> <image class="sidebar-footer-icon help-icon"/> </html:label>
+  </hbox>
+  <vbox class="goonfox-collapse indent">
+    <html:input type="checkbox" id="goonfox-autocopy-collapse" />
+    <vbox class="goonfox-collapsed tracking-protection-ui content-blocking-category">
+      <label data-l10n-id="goonfox-autocopy-description" />
+      <checkbox preference="clipboard.autocopy" label="clipboard.autocopy" />
+      <checkbox preference="middlemouse.paste" label="middlemouse.paste" />
+    </vbox>
+  </vbox>
+
+  <hbox>
+    <checkbox id="goonfox-styling-checkbox" data-l10n-id="goonfox-styling-checkbox" preference="toolkit.legacyUserProfileCustomizations.stylesheets" flex="1" />
+    <html:label for="goonfox-styling-collapse" class="sidebar-footer-link" pack="end"> <image class="sidebar-footer-icon help-icon"/> </html:label>
+  </hbox>
+  <vbox class="goonfox-collapse indent">
+    <html:input type="checkbox" id="goonfox-styling-collapse" />
+    <vbox class="goonfox-collapsed tracking-protection-ui content-blocking-category">
+      <label data-l10n-id="goonfox-styling-description" />
+      <html:div> <image src="chrome://browser/skin/warning.svg" /> <label data-l10n-id="goonfox-styling-warning1" class="goonfox-warning" /> </html:div>
+      <checkbox preference="toolkit.legacyUserProfileCustomizations.stylesheets" label="toolkit.legacyUserProfileCustomizations.stylesheets" />
+    </vbox>
+  </vbox>
+
+</groupbox>
+
+<groupbox hidden="true" data-category="paneLibrewolf">
+  <html:h2 data-l10n-id="goonfox-network-heading" />
+
+  <hbox>
+    <checkbox id="goonfox-ipv6-checkbox" data-l10n-id="goonfox-ipv6-checkbox" preference="network.dns.disableIPv6" flex="1" />
+    <html:label for="goonfox-ipv6-collapse" class="sidebar-footer-link" pack="end"> <image class="sidebar-footer-icon help-icon"/> </html:label>
+  </hbox>
+  <vbox class="goonfox-collapse indent">
+    <html:input type="checkbox" id="goonfox-ipv6-collapse" />
+    <vbox class="goonfox-collapsed tracking-protection-ui content-blocking-category">
+      <label data-l10n-id="goonfox-ipv6-description" />
+      <html:div> <image src="chrome://browser/skin/warning.svg" /> <label data-l10n-id="goonfox-ipv6-warning1" class="goonfox-warning" /> </html:div>
+      <checkbox preference="network.dns.disableIPv6" label="network.dns.disableIPv6" />
+    </vbox>
+  </vbox>
+
+</groupbox>
+
+<groupbox hidden="true" data-category="paneLibrewolf">
+  <html:h2 data-l10n-id="goonfox-privacy-heading" />
+
+  <hbox>
+    <checkbox id="goonfox-xorigin-ref-checkbox" data-l10n-id="goonfox-xorigin-ref-checkbox" preference="network.http.referer.XOriginPolicy" flex="1" />
+    <html:label for="goonfox-xorigin-ref-collapse" class="sidebar-footer-link" pack="end"> <image class="sidebar-footer-icon help-icon"/> </html:label>
+  </hbox>
+  <vbox class="goonfox-collapse indent">
+    <html:input type="checkbox" id="goonfox-xorigin-ref-collapse" />
+    <vbox class="goonfox-collapsed tracking-protection-ui content-blocking-category">
+      <label data-l10n-id="goonfox-xorigin-ref-description" />
+      <html:div> <image src="chrome://browser/skin/warning.svg" /> <label data-l10n-id="goonfox-xorigin-ref-warning1" class="goonfox-warning" /> </html:div>
+      <checkbox disabled="true" preference="network.http.referer.XOriginPolicy" label="network.http.referer.XOriginPolicy" />
+    </vbox>
+  </vbox>
+
+</groupbox>
+
+<groupbox hidden="true" data-category="paneLibrewolf">
+  <html:h2 data-l10n-id="goonfox-broken-heading" />
+
+  <hbox>
+    <checkbox id="goonfox-rfp-checkbox" data-l10n-id="goonfox-rfp-checkbox" preference="privacy.resistFingerprinting" flex="1" />
+    <html:label for="goonfox-rfp-collapse" class="sidebar-footer-link" pack="end"> <image class="sidebar-footer-icon help-icon"/> </html:label>
+  </hbox>
+  <vbox class="goonfox-collapse indent">
+    <html:input type="checkbox" id="goonfox-rfp-collapse" />
+    <vbox class="goonfox-collapsed tracking-protection-ui content-blocking-category">
+      <label data-l10n-id="goonfox-rfp-description" />
+      <html:div> <image src="chrome://browser/skin/warning.svg" /> <label data-l10n-id="goonfox-rfp-warning1" class="goonfox-warning" /> </html:div>
+      <checkbox preference="privacy.resistFingerprinting" label="privacy.resistFingerprinting" />
+    </vbox>
+  </vbox>
+
+  <vbox class="indent">
+
+    <hbox>
+      <checkbox id="goonfox-letterboxing-checkbox" data-l10n-id="goonfox-letterboxing-checkbox" preference="privacy.resistFingerprinting.letterboxing" flex="1" />
+      <html:label for="goonfox-letterboxing-collapse" class="sidebar-footer-link" pack="end"> <image class="sidebar-footer-icon help-icon"/> </html:label>
+    </hbox>
+    <vbox class="goonfox-collapse indent">
+      <html:input type="checkbox" id="goonfox-letterboxing-collapse" />
+      <vbox class="goonfox-collapsed tracking-protection-ui content-blocking-category">
+        <label data-l10n-id="goonfox-letterboxing-description" />
+        <checkbox preference="privacy.resistFingerprinting.letterboxing" label="privacy.resistFingerprinting.letterboxing" />
+      </vbox>
+    </vbox>
+
+  </vbox>
+
+  <hbox>
+    <checkbox id="goonfox-webgl-checkbox" data-l10n-id="goonfox-webgl-checkbox" preference="webgl.disabled" flex="1" />
+    <html:label for="goonfox-webgl-collapse" class="sidebar-footer-link" pack="end"> <image class="sidebar-footer-icon help-icon"/> </html:label>
+  </hbox>
+  <vbox class="goonfox-collapse indent">
+    <html:input type="checkbox" id="goonfox-webgl-collapse" />
+    <vbox class="goonfox-collapsed tracking-protection-ui content-blocking-category">
+      <label data-l10n-id="goonfox-webgl-description" />
+      <html:div> <image src="chrome://browser/skin/warning.svg" /> <label data-l10n-id="goonfox-webgl-warning1" class="goonfox-warning" /> </html:div>
+      <checkbox preference="webgl.disabled" label="webgl.disabled" />
+    </vbox>
+  </vbox>
+
+
+</groupbox>
+
+<groupbox hidden="true" data-category="paneLibrewolf">
+  <html:h2 data-l10n-id="goonfox-security-heading" />
+
+  <hbox>
+    <checkbox id="goonfox-goog-safe-checkbox" data-l10n-id="goonfox-goog-safe-checkbox" preference="browser.safebrowsing.malware.enabled" flex="1" />
+    <html:label for="goonfox-goog-safe-collapse" class="sidebar-footer-link" pack="end"> <image class="sidebar-footer-icon help-icon"/> </html:label>
+  </hbox>
+  <vbox class="goonfox-collapse indent">
+    <html:input type="checkbox" id="goonfox-goog-safe-collapse" />
+    <vbox class="goonfox-collapsed tracking-protection-ui content-blocking-category">
+      <label data-l10n-id="goonfox-goog-safe-description" />
+      <html:div> <image src="chrome://browser/skin/warning.svg" /> <label data-l10n-id="goonfox-goog-safe-warning1" class="goonfox-warning" /> </html:div>
+      <checkbox preference="browser.safebrowsing.malware.enabled" label="browser.safebrowsing.malware.enabled" />
+      <checkbox preference="browser.safebrowsing.phishing.enabled" label="browser.safebrowsing.phishing.enabled" />
+      <checkbox preference="browser.safebrowsing.blockedURIs.enabled" label="browser.safebrowsing.blockedURIs.enabled" />
+      <checkbox preference="browser.safebrowsing.provider.google4.gethashURL" label="browser.safebrowsing.provider.google4.gethashURL" id="goonfox-goog-safe-hash4"/>
+      <checkbox preference="browser.safebrowsing.provider.google4.updateURL" label="browser.safebrowsing.provider.google4.updateURL" id="goonfox-goog-safe-up4"/>
+      <checkbox preference="browser.safebrowsing.provider.google.gethashURL" label="browser.safebrowsing.provider.google.gethashURL" id="goonfox-goog-safe-hash"/>
+      <checkbox preference="browser.safebrowsing.provider.google.updateURL" label="browser.safebrowsing.provider.google.updateURL" id="goonfox-goog-safe-up"/>
+    </vbox>
+  </vbox>
+
+  <vbox class="indent">
+    <hbox>
+      <checkbox id="goonfox-goog-safe-download-checkbox" data-l10n-id="goonfox-goog-safe-download-checkbox" preference="browser.safebrowsing.downloads.enabled" flex="1" />
+      <html:label for="goonfox-goog-safe-download-collapse" class="sidebar-footer-link" pack="end"> <image class="sidebar-footer-icon help-icon"/> </html:label>
+    </hbox>
+    <vbox class="goonfox-collapse indent">
+      <html:input type="checkbox" id="goonfox-goog-safe-download-collapse" />
+      <vbox class="goonfox-collapsed tracking-protection-ui content-blocking-category">
+        <label data-l10n-id="goonfox-goog-safe-download-description" />
+        <html:div> <image src="chrome://browser/skin/warning.svg" /> <label data-l10n-id="goonfox-goog-safe-download-warning1" class="goonfox-warning" /> </html:div>
+        <checkbox preference="browser.safebrowsing.downloads.enabled" label="browser.safebrowsing.downloads.enabled" />
+      </vbox>
+    </vbox>
+  </vbox>
+
+</groupbox>
+
+<hbox class="subcategory" hidden="true" data-category="paneLibrewolf">
+    <html:h1 data-l10n-id="goonfox-footer"/>
+</hbox>
+
+<groupbox data-category="paneLibrewolf" hidden="true">
+  <vbox align="start">
+    <hbox>
+      <button id="goonfox-config-link" is="highlightable-button" flex="1">
+        <image class="goonfox-button-icon" src="chrome://browser/skin/preferences/category-general.svg" />
+        <label data-l10n-id="goonfox-config-link"></label>
+      </button>
+      <button id="goonfox-open-profile" is="highlightable-button" flex="1">
+        <image class="goonfox-button-icon" src="chrome://browser/skin/open.svg" />
+        <label data-l10n-id="goonfox-open-profile"></label>
+      </button>
+    </hbox>
+  </vbox>
+</groupbox>
+
+</html:template>

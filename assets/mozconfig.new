@@ -14,8 +14,8 @@ ac_add_options --enable-rust-simd
 # not compatible with ac_add_options --disable-jemalloc, which only works when preloading custom malloc
 ac_add_options --enable-replace-malloc
 
-ac_add_options --with-app-name=librewolf
-ac_add_options --with-branding=browser/branding/librewolf
+ac_add_options --with-app-name=goonfox
+ac_add_options --with-branding=browser/branding/goonfox
 
 ac_add_options --with-unsigned-addon-scopes=app,system
 

@@ -50,13 +50,13 @@ index cbdf07bcdae1..4e923ff44f33 100644
  
 +ChromeUtils.defineLazyGetter(lazy, "allowedCollections", () =>
 +  Services.prefs
-+    .getStringPref("librewolf.services.settings.allowedCollections", "")
++    .getStringPref("goonfox.services.settings.allowedCollections", "")
 +    .split(",")
 +);
 +
 +ChromeUtils.defineLazyGetter(lazy, "allowedCollectionsFromDump", () =>
 +  Services.prefs
-+    .getStringPref("librewolf.services.settings.allowedCollectionsFromDump", "")
++    .getStringPref("goonfox.services.settings.allowedCollectionsFromDump", "")
 +    .split(",")
 +);
 +

@@ -52,50 +52,50 @@ var gLibrewolfPane = {
 
     // Set all event listeners on checkboxes
     setBoolSyncListeners(
-      "librewolf-extension-update-checkbox",
+      "goonfox-extension-update-checkbox",
       ["extensions.update.autoUpdateDefault", "extensions.update.enabled"],
       [true,                                  true                       ],
     );
     setBoolSyncListeners(
-      "librewolf-ipv6-checkbox",
+      "goonfox-ipv6-checkbox",
       ["network.dns.disableIPv6"],
       [false,                   ],
     );
     setBoolSyncListeners(
-      "librewolf-sync-checkbox",
+      "goonfox-sync-checkbox",
       ["identity.fxaccounts.enabled"],
       [true,                   ],
     );
     setBoolSyncListeners(
-      "librewolf-autocopy-checkbox",
+      "goonfox-autocopy-checkbox",
       ["clipboard.autocopy", "middlemouse.paste"],
       [true,                 true               ],
     );
     setBoolSyncListeners(
-      "librewolf-styling-checkbox",
+      "goonfox-styling-checkbox",
       ["toolkit.legacyUserProfileCustomizations.stylesheets"],
       [true,                                                ],
     );
 
     setBoolSyncListeners(
-      "librewolf-webgl-checkbox",
+      "goonfox-webgl-checkbox",
       ["webgl.disabled"],
       [false           ],
     );
     setBoolSyncListeners(
-      "librewolf-rfp-checkbox",
+      "goonfox-rfp-checkbox",
       ["privacy.resistFingerprinting"],
       [true                          ],
     );
 
     setBoolSyncListeners(
-      "librewolf-letterboxing-checkbox",
+      "goonfox-letterboxing-checkbox",
       ["privacy.resistFingerprinting.letterboxing"],
       [true                                       ],
     );
 
     setSyncListeners(
-      "librewolf-goog-safe-checkbox",
+      "goonfox-goog-safe-checkbox",
       [
         "browser.safebrowsing.malware.enabled",
         "browser.safebrowsing.phishing.enabled",
@@ -126,19 +126,19 @@ var gLibrewolfPane = {
     );
 
     setXOriginPolicySyncListeners(
-      "librewolf-xorigin-ref-checkbox",
+      "goonfox-xorigin-ref-checkbox",
       "network.http.referer.XOriginPolicy",
       [1, 2],
       [0]
     );
 
     // Set event listener on open profile directory button
-    setEventListener("librewolf-open-profile", "command", openProfileDirectory);
+    setEventListener("goonfox-open-profile", "command", openProfileDirectory);
     // Set event listener on open about:config button
-    setEventListener("librewolf-config-link", "click", openAboutConfig);
+    setEventListener("goonfox-config-link", "click", openAboutConfig);
 
     // Notify observers that the UI is now ready
-    Services.obs.notifyObservers(window, "librewolf-pane-loaded");
+    Services.obs.notifyObservers(window, "goonfox-pane-loaded");
   },
 };
 

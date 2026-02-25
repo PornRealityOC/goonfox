@@ -33,14 +33,14 @@ ext:=.tar.gz
 ff_source_dir:=firefox-$(version)
 ff_source_tarball:=firefox-$(version).source.tar.xz
 
-lw_source_dir:=librewolf-$(version)-$(release)
-lw_source_tarball:=librewolf-$(version)-$(release).source$(ext)
+gf_source_dir:=goonfox-$(version)-$(release)
+gf_source_tarball:=goonfox-$(version)-$(release).source$(ext)
 
 help :
 
 	@echo "use: $(MAKE) [all] [check] [clean] [veryclean] [bootstrap] [build] [package] [run]"
 	@echo ""
-	@echo "  all         - Make LibreWolf source archive ${version}-${release}."
+	@echo "  all         - Make Goonfox source archive ${version}-${release}."
 	@echo ""
 	@echo "  check       - Check if there is a new version of Firefox."
 	@echo "  update      - Update the git submodules."
@@ -53,10 +53,10 @@ help :
 	@echo ""
 	@echo "  fetch       - fetch Firefox source archive."
 	@echo "  dir         - extract Firefox and apply the patches, creating a"
-	@echo "                ready to build librewolf folder."
-	@echo "  build       - Build LibreWolf (requires bootstrapped build environment)."
-	@echo "  package     - Package LibreWolf (requires build)."
-	@echo "  run         - Run LibreWolf (requires build)."
+	@echo "                ready to build goonfox folder."
+	@echo "  build       - Build Goonfox (requires bootstrapped build environment)."
+	@echo "  package     - Package Goonfox (requires build)."
+	@echo "  run         - Run Goonfox (requires build)."
 	@echo ""
 	@echo "  check-patchfail - check patches for errors."
 	@echo "  check-fuzz      - check patches for fuzz."
@@ -68,7 +68,7 @@ help :
 	@echo ""
 	@echo "Maintainer commands:"
 	@echo ""
-	@echo "  patches   - Just make the LibreWolf source directory (download, extract, patch)"
+	@echo "  patches   - Just make the Goonfox source directory (download, extract, patch)"
 	@echo "  all       - build LW tarball"
 	@echo ""
 	@echo "  clean     - remove all cruft except LW source tree"
@@ -83,7 +83,7 @@ help :
 
 moztree :
 
-	(cd $(lw_source_dir) && ../scripts/moztree )
+	(cd $(gf_source_dir) && ../scripts/moztree )
 
 patches :
 
@@ -93,16 +93,16 @@ patches :
 
 # building...
 
-all : $(lw_source_tarball)
+all : $(gf_source_tarball)
 
 
 # cleaning up..
 
 clean :
-	rm -rf *~ public_key.asc $(ff_source_dir) $(lw_source_tarball) $(lw_source_tarball).sha256sum $(lw_source_tarball).sha512sum firefox-$(version) patchfail.out patchfail-fuzz.out 
+	rm -rf *~ public_key.asc $(ff_source_dir) $(gf_source_tarball) $(gf_source_tarball).sha256sum $(gf_source_tarball).sha512sum firefox-$(version) patchfail.out patchfail-fuzz.out 
 
 veryclean : clean
-	rm -rf $(lw_source_dir) 
+	rm -rf $(gf_source_dir) 
 
 distclean : veryclean
 	rm -f $(ff_source_tarball) $(ff_source_tarball).asc
@@ -118,7 +118,7 @@ check :
 	mv -vf version.tmp version
 	@echo ""
 	@echo "Firefox version   : " $$(cat version)
-	@echo "LibreWolf release : " $$(cat release)
+	@echo "Goonfox release : " $$(cat release)
 	@echo ""
 
 
@@ -144,49 +144,49 @@ $(ff_source_tarball) :
 	wget -qO $(ff_source_tarball) "$(ff_source_url)"
 	gpg --verify $(ff_source_tarball).asc $(ff_source_tarball)
 
-$(lw_source_dir) : $(ff_source_tarball) ./version ./release scripts/librewolf-patches.py assets/mozconfig assets/patches.txt
-	rm -rf $(ff_source_dir) $(lw_source_dir)
+$(gf_source_dir) : $(ff_source_tarball) ./version ./release scripts/goonfox-patches.py assets/mozconfig assets/patches.txt
+	rm -rf $(ff_source_dir) $(gf_source_dir)
 	tar xf $(ff_source_tarball)
-	mv $(ff_source_dir) $(lw_source_dir)
-	python3 scripts/librewolf-patches.py $(version) $(release)
+	mv $(ff_source_dir) $(gf_source_dir)
+	python3 scripts/goonfox-patches.py $(version) $(release)
 
-$(lw_source_tarball) : $(lw_source_dir)
-	rm -f $(lw_source_tarball)
-	tar cf librewolf-$(version)-$(release).source.tar $(lw_source_dir)
-	pigz -6 librewolf-$(version)-$(release).source.tar
-	touch $(lw_source_dir)
-	sha256sum $(lw_source_tarball) > $(lw_source_tarball).sha256sum
-	cat $(lw_source_tarball).sha256sum
-	sha256sum -c $(lw_source_tarball).sha256sum
-	sha512sum $(lw_source_tarball) > $(lw_source_tarball).sha512sum
-	cat $(lw_source_tarball).sha512sum
-	sha512sum -c $(lw_source_tarball).sha512sum
-	if [ -n "$${SIGNING_KEY}" ]; then printf '%s\n' "$${SIGNING_KEY}" | gpg --import && gpg --detach-sign $(lw_source_tarball) && ls -lh $(lw_source_tarball).sig; fi
-	ls -lh $(lw_source_tarball)*
+$(gf_source_tarball) : $(gf_source_dir)
+	rm -f $(gf_source_tarball)
+	tar cf goonfox-$(version)-$(release).source.tar $(gf_source_dir)
+	pigz -6 goonfox-$(version)-$(release).source.tar
+	touch $(gf_source_dir)
+	sha256sum $(gf_source_tarball) > $(gf_source_tarball).sha256sum
+	cat $(gf_source_tarball).sha256sum
+	sha256sum -c $(gf_source_tarball).sha256sum
+	sha512sum $(gf_source_tarball) > $(gf_source_tarball).sha512sum
+	cat $(gf_source_tarball).sha512sum
+	sha512sum -c $(gf_source_tarball).sha512sum
+	if [ -n "$${SIGNING_KEY}" ]; then printf '%s\n' "$${SIGNING_KEY}" | gpg --import && gpg --detach-sign $(gf_source_tarball) && ls -lh $(gf_source_tarball).sig; fi
+	ls -lh $(gf_source_tarball)*
 
 
 debs=python3 python3-dev python3-pip
 rpms=python3 python3-devel
-bootstrap : $(lw_source_dir)
+bootstrap : $(gf_source_dir)
 	(sudo apt-get -y install $(debs); true)
 	(sudo rpm -y install $(rpms); true)
-	(cd $(lw_source_dir) && MOZBUILD_STATE_PATH=$$HOME/.mozbuild ./mach --no-interactive bootstrap --application-choice=browser)
+	(cd $(gf_source_dir) && MOZBUILD_STATE_PATH=$$HOME/.mozbuild ./mach --no-interactive bootstrap --application-choice=browser)
 
 setup-wasi :
 	./scripts/setup-wasi-linux.sh
 
 
-dir : $(lw_source_dir)
+dir : $(gf_source_dir)
 
-build : $(lw_source_dir)
-	(cd $(lw_source_dir) && ./mach build)
+build : $(gf_source_dir)
+	(cd $(gf_source_dir) && ./mach build)
 
 package :
-	(cd $(lw_source_dir) && cat browser/locales/shipped-locales | xargs ./mach package-multi-locale --locales)
-	cp -v $(lw_source_dir)/obj-*/dist/librewolf-$(version)-$(release).en-US.*.tar.xz .
+	(cd $(gf_source_dir) && cat browser/locales/shipped-locales | xargs ./mach package-multi-locale --locales)
+	cp -v $(gf_source_dir)/obj-*/dist/goonfox-$(version)-$(release).en-US.*.tar.xz .
 
 run :
-	(cd $(lw_source_dir) && ./mach run)
+	(cd $(gf_source_dir) && ./mach run)
 
 
 check-patchfail:
@@ -209,7 +209,7 @@ fixfuzz :
 #
 
 
-build_image=librewolf-build-image
+build_image=goonfox-build-image
 
 docker-build-image :
 	docker build --no-cache -t $(build_image) - < assets/Dockerfile
@@ -250,7 +250,7 @@ fetch-upstream-woodpecker : fetch
 test : full-test
 
 # full-test: produce the xz artifact using bsys6 from scratch
-full-test : $(lw_source_tarball)
+full-test : $(gf_source_tarball)
 	${MAKE} -f assets/testing.mk bsys6_x86_64_linux_xz_artifact
 
 test-linux : full-test
@@ -261,9 +261,9 @@ test-candidate :
 test-beta :
 	$(MAKE) FF_CHANNEL=beta FF_BUILD=$(FF_BUILD) FF_BETA_SUFFIX=$(FF_BETA_SUFFIX) test-linux
 
-test-macos : $(lw_source_tarball)
+test-macos : $(gf_source_tarball)
 	${MAKE} -f assets/testing.mk bsys6_x86_64_macos_dmg_artifact
 
-test-windows : $(lw_source_tarball)
+test-windows : $(gf_source_tarball)
 	${MAKE} -f assets/testing.mk bsys6_x86_64_windows_zip_artifact
 

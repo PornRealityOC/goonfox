@@ -1,1 +1,1 @@
-identity-allow-site-data = LibreWolf: Tallenna aina evästeet/tiedot tälle sivustolle
+identity-allow-site-data = Goonfox: Tallenna aina evästeet/tiedot tälle sivustolle

@@ -8,17 +8,17 @@
 
 # BrandFullNameInternal is used for some registry and file system values
 # instead of BrandFullName and typically should not be modified.
-!define BrandFullNameInternal "LibreWolf"
-!define BrandFullName         "LibreWolf"
-!define CompanyName           "LibreWolf"
+!define BrandFullNameInternal "Goonfox"
+!define BrandFullName         "Goonfox"
+!define CompanyName           "Goonfox"
 !define URLInfoAbout          "https://www.libreWolf.gitlab.io"
-!define HelpLink              "https://github.com/LibreWolf-Browser"
+!define HelpLink              "https://github.com/Goonfox-Browser"
 
-!define URLStubDownloadX86 "https://github.com/LibreWolf-Browser/LibreWolf/releases"
-!define URLStubDownloadAMD64 "https://github.com/LibreWolf-Browser/LibreWolf/releases"
-!define URLStubDownloadAArch64 "https://github.com/LibreWolf-Browser/LibreWolf/releases"
-!define URLManualDownload "https://github.com/LibreWolf-Browser/LibreWolf/releases"
-!define URLSystemRequirements "https://github.com/LibreWolf-Browser/LibreWolf"
+!define URLStubDownloadX86 "https://github.com/Goonfox-Browser/Goonfox/releases"
+!define URLStubDownloadAMD64 "https://github.com/Goonfox-Browser/Goonfox/releases"
+!define URLStubDownloadAArch64 "https://github.com/Goonfox-Browser/Goonfox/releases"
+!define URLManualDownload "https://github.com/Goonfox-Browser/Goonfox/releases"
+!define URLSystemRequirements "https://github.com/Goonfox-Browser/Goonfox"
 !define Channel "unofficial"
 
 # The installer's certificate name and issuer expected by the stub installer
